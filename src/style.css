@@ -1,0 +1,655 @@
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+  font-family: "nm";
+  src: url("../public/fonts/nm/nm-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+  font-family: 'nm';
+}
+
+/* h1 span {
+  font-family: "PP Editorial Old", "PP Neue Montreal";
+  font-weight: 500;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+} */
+.nav a,
+.header p {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.header h1{
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+
+
+
+
+
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 1.25em 1.5em;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 1.5em;
+  will-change: transform;
+  mix-blend-mode: difference;
+  z-index: 10;
+}
+
+.nav > div {
+  flex: 1;
+}
+
+.logo a {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 60px;
+  height: 40px;
+  color: #fff;
+  font-family: "DM Mono", monospace;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  padding-top: 35svh;
+  display: flex;
+  flex-direction: column;
+  align-items: last baseline;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+.line{
+    padding-right: 1em;
+}
+
+.line p{
+    padding-bottom: 2em;
+    font-family: "DM Mono", monospace;
+}
+
+.hero-copy{
+    width: 30%;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: calc(var(--vh) * 100);
+  overflow: hidden;
+}
+
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: calc(var(--vh) * 100);
+    overflow: hidden;
+    z-index: -1;
+    scale: 2;
+    transform-origin: center center;
+  }
+
+
+.cta {
+  position: absolute;
+  left: 50%;
+  bottom: 3em;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 60px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+  border-radius: 4rem;
+  will-change: transform;
+}
+
+.cta-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cta-label p {
+  color: #000;
+}
+
+.cta-icon {
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #303030;
+  border-radius: 60px;
+  will-change: transform;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(var(--vh) * 100);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.block {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.intro-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 0.25rem;
+}
+
+#word-1 {
+  position: relative;
+  left: 2.5rem;
+  padding-right: 0.25rem;
+}
+
+#word-2{
+    position: relative;
+    left: 4rem;
+}
+
+.word h1 {
+  font-size: 2.5rem;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center top;
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+}
+
+.spinner-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 1.4px solid #000;
+  border-top-color: rgba(0, 0, 0, 0.125);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.digit {
+  flex: 1;
+  padding-top: 1rem;
+}
+
+.count .digit h1 {
+  font-family: "DM Mono", monospace;
+  font-size: 15rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.nav {
+  transform: translateY(-120%);
+}
+
+.cta {
+  transform: translateX(-50%) scale(0);
+}
+
+.cta-icon {
+  transform: scale(0);
+}
+
+.line,
+.cta-label,
+.word,
+.count .digit {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.line h1,
+.line p,
+.cta-label p,
+.count .digit h1 {
+  position: relative;
+  transform: translateY(120%);
+  will-change: transform;
+}
+
+#word-1 h1 {
+  transform: translateY(-120%);
+}
+
+#word-2 h1 {
+  transform: translateY(120%);
+}
+
+.block {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.divider {
+  transform: scaleY(0%);
+  will-change: transform;
+}
+
+
+
+img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+  }
+  
+ 
+  
+  section {
+    position: relative;
+    width: 100vw;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+ 
+
+  
+  
+  .cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25svh;
+  }
+  
+  .card-marquee {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+  
+  .card-marquee .marquee {
+    display: flex;
+  }
+  
+  .card-marquee .marquee h1 {
+    white-space: nowrap;
+    font-size: 7vw;
+    font-weight: 600;
+    margin-right: 30px;
+    font-family: "PP Editorial Old";
+}
+  
+  .card {
+    position: relative;
+    width: 100vw;
+    height: calc(var(--vh) * 100);
+    padding: 1.5em;
+  }
+  
+  .card-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    will-change: transform;
+  }
+  
+ 
+
+  
+  .wrapper{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5em;
+  }
+
+
+
+  .card-img {
+    width: 80%;
+    /* border-radius: 150px; */
+    overflow: hidden;
+  }
+  
+  .card-img-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vmax;
+    height: 100vmax;
+    transform: translate(-50%, -50%) scale(0.3);
+    border-radius: 50%;
+    opacity: 0.2;
+    overflow: hidden;
+    will-change: transform, border-radius;
+  }
+  
+
+  .card-img img {
+    transform: scale(2);
+  }
+  
+  .card-content{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+  
+ 
+
+  .card-title h1{
+    font-size: 5.5rem;
+    font-family: "DM Mono", monospace;
+    mix-blend-mode: difference;
+    color: #000;
+  }
+
+
+
+  
+  .card-description p{
+    font-size: 2rem;
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 300;
+    color: #000;
+    /* text-transform: uppercase; */
+  }
+
+
+  .card-content-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1;
+  }
+  .card-content-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-content-1 .card-title-1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .card-description-1 p{
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  .card-content-1 .card-description-1 {
+    text-align: center;
+    width: 40%;
+    margin-bottom: 3em;
+    position: relative;
+    transform: translateX(40px);
+    opacity: 0;
+  }
+ 
+  .card-2, .card-3{
+    background-color: #fff;
+  }
+  .card-4{
+    background-color: #1a1a1a;
+  }
+  .card:nth-child(2) {
+    margin-top: 50vh;
+  }
+  
+  .char {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .char span {
+    transform: translateX(100%);
+    display: inline-block;
+    will-change: transform;
+  }
+ 
+  
+
+
+
+  
+.outro{
+    height: calc(var(--vh) * 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    text-align: center;
+    overflow: hidden;
+}
+
+.outro-img{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+.outro-img img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.outro-description h1{
+    line-height: 2;
+    font-family: "PP Editorial Old";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 3rem;
+} 
+
+.card-4 p, .card-4 h1{
+    color: #fff;
+}
+
+
+@media (max-width: 900px) {
+
+    #word-1{
+        margin-right: 13px;
+    }
+
+  .hero-copy{
+    width: 100%;
+  }
+  .header{
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: bottom;
+    margin: 0;
+    padding-left: 1em;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  
+
+  .container{
+    background-color: #1a1a1a;
+    background-image: url('../public/img/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .cta {
+    width: 90%;
+  }
+  .card-content .card-description {
+    width: 90%;
+}
+  .card-title h1{
+    font-size: 32px;
+  }
+  .card-description p{
+    font-size: 18px;
+  }
+  .card-description-1 p{
+    font-size: 24px;
+  }
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1.3em; */
+  }
+  .card-img{
+    width: 100%;
+  }
+  .card-img-1 {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100vw;
+    height: 100vw;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+  
+  #hide-1, #hide-2, #hide-3{
+    display: none;
+  }
+  .outro-description h1{
+    font-size: 22px;
+  }
+}
+
+
+
+
+
